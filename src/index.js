@@ -41,11 +41,18 @@ function render(tasks) {
     const labelItem = document.createElement('label');
     const textElement = document.createElement('p');
     textElement.classList.add('pad-left');
-
     textElement.innerText = task.description;
     const menu = document.createElement('i');
     menu.classList.add('fa', 'fa-ellipsis-v', 'right');
-
+    menu.addEventListener('click', (e) => {
+      editTask(e, listItem, textElement, spanItem, allTasks, task, render);
+      menu.addEventListener('click', () => {
+        deleteTask(task);
+        todoList = JSON.parse(localStorage.getItem('tasks'));
+        const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+        render(sortedTasks);
+      });
+    });
     labelItem.append(textElement);
     listItem.append(spanItem, menu);
     taskList.append(listItem);
@@ -77,6 +84,31 @@ if (localStorage.getItem('tasks')) {
 } else {
   localStorage.setItem('tasks', JSON.stringify(todoList));
 }
+
+document.getElementById('add-button').addEventListener('click', () => {
+  addNewTask();
+  todoList = JSON.parse(localStorage.getItem('tasks'));
+  const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+  render(sortedTasks);
+});
+
+document.getElementById('task-description').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    addNewTask();
+    todoList = JSON.parse(localStorage.getItem('tasks'));
+    const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+    render(sortedTasks);
+  }
+});
+
+document.getElementById('clear-completed-button').addEventListener('click', () => {
+  clearAllCompleted();
+  if (localStorage.getItem('tasks')) {
+    todoList = JSON.parse(localStorage.getItem('tasks'));
+    const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+    render(sortedTasks);
+  }
+});
 
 const sortedTasks = todoList.sort((a, b) => a.index - b.index);
 document.addEventListener('DOMContentLoaded', render(sortedTasks));
