@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://priceless-goldstine-d252ba.netlify.app/)
+[Live Demo Link](https://mystifying-blackwell-0a1fc0.netlify.app/)
 
 To get a local copy up and running follow these simple example steps.
 
@@ -23,6 +23,8 @@ To get a local copy up and running follow these simple example steps.
 Go to [My Repo](https://github.com/sneeu-leeu/To-Do-List/tree/development) and clone the project by opening your terminal and entering "git clone" + "The link supplied".
 
 cd into the repo
+
+run ' npm install '
 
 Open the repo in your code editor and launch it by running '$ npm start' !
 
