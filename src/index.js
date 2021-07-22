@@ -63,7 +63,7 @@ function render(tasks) {
 
 taskList.addEventListener('drop', (e) => {
   const sortedTasks = todoList.sort((a, b) => a.index - b.index);
-  drop(e, sortedTasks, WebGL2RenderingContext);
+  drop(e, sortedTasks, render);
 });
 
 if (localStorage.getItem('tasks')) {
