@@ -34,13 +34,16 @@ function render(tasks) {
     listItem.id = task.index;
 
     const spanItem = document.createElement('span');
+    spanItem.classList.add('flex', 'text-align');
+    const labelItem = document.createElement('label');
     const textElement = document.createElement('p');
+    textElement.classList.add('pad-left');
 
     textElement.innerText = task.description;
-    textElement.classList.add('d-inline');
     const menu = document.createElement('i');
-    menu.classList.add('fa', 'fa-ellipsis-v', 'text-secondary');
+    menu.classList.add('fa', 'fa-ellipsis-v', 'right');
 
+    labelItem.append(textElement);
     listItem.append(spanItem, menu);
     taskList.append(listItem);
 
@@ -48,7 +51,7 @@ function render(tasks) {
     listItem.addEventListener('dragstart', dragStart);
     const checkBox = document.createElement('input');
     checkBox.type = 'checkbox';
-    checkBox.classList.add('me-2');
+    checkBox.classList.add('check');
 
     if (task.completed) {
       textElement.classList.add('strike', 'text-muted');

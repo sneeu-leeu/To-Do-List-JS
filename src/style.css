@@ -69,7 +69,7 @@ input.check {
   margin-right: 1.5em;
 }
 
-input.check:checked + label {
+p.strike {
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.507);
 }
