@@ -44,6 +44,7 @@ Linkedin: Stephan Annandale
 
 Contributions, issues, and feature requests are welcome!
 
+
 Feel free to check the [issues page](https://github.com/sneeu-leeu/To-Do-List/issues/4).
 
 ## Show your support
@@ -53,3 +54,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
