@@ -1,6 +1,5 @@
+/* eslint-disable no-unused-vars */
 import _ from 'lodash';
-import './style.css';
-
 import './style.css';
 
 const todoList = [
@@ -27,16 +26,16 @@ function render() {
   const sortedTask = todoList.sort((a, b) => a.index - b.index);
   sortedTask.forEach((task) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('border', 'flex', 'height', 'pad-left');
+    listItem.classList.add('border', 'flex', 'height', 'pad-left', 'todo-item');
     const spanItem = document.createElement('span');
     const checkBox = document.createElement('input');
-    checkBox.type = 'checbox';
+    checkBox.type = 'checkbox';
     checkBox.classList.add('check');
     const menu = document.createElement('i');
     menu.classList.add('fa', 'fa-ellipsis-v');
     spanItem.append(checkBox, task.description);
     listItem.append(spanItem, menu);
-    todoList.append(listItem);
+    taskList.append(listItem);
   });
 }
 
