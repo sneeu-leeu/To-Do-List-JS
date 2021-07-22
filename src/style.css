@@ -50,6 +50,10 @@ body {
   height: 1.1em;
 }
 
+.add-button {
+  transform: rotate(90deg);
+}
+
 .todo-item {
   list-style: none;
   padding-left: 10px;

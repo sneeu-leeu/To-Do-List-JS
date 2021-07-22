@@ -9,23 +9,7 @@ import { dragStart, dragOver, drop } from './drag.js';
 
 const taskList = document.getElementById('js-todo-list');
 
-let todoList = [
-  {
-    description: '1 - Task 1',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: '2 - Task 2',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: '3 - Task 3',
-    completed: false,
-    index: 2,
-  },
-];
+let todoList = [];
 
 function render(tasks) {
   taskList.innerHTML = '';
@@ -45,7 +29,7 @@ function render(tasks) {
     const menu = document.createElement('i');
     menu.classList.add('fa', 'fa-ellipsis-v', 'right');
     menu.addEventListener('click', (e) => {
-      editTask(e, listItem, textElement, spanItem, allTasks, task, render);
+      editTask(e, listItem, textElement, spanItem, todoList, task, render);
       menu.addEventListener('click', () => {
         deleteTask(task);
         todoList = JSON.parse(localStorage.getItem('tasks'));
