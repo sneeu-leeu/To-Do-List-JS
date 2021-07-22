@@ -104,3 +104,7 @@ p.strike {
   color: rgba(0, 0, 0, 0.541);
   background-color: rgba(240, 240, 240, 0.836);
 }
+
+.bg-red {
+  background-color: red;
+}
