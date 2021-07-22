@@ -5,7 +5,7 @@ import { dragStart, dragOver, drop } from './drag.js';
 
 const taskList = document.getElementById('js-todo-list');
 
-const todoList = [
+let todoList = [
   {
     description: '1 - Task 1',
     completed: false,
@@ -60,9 +60,16 @@ function render(tasks) {
   });
 }
 
+taskList.addEventListener('drop', (e) => {
+  const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+  drop(e, sortedTasks, populate);
+});
 
-
-
+if (localStorage.getItem('tasks')) {
+  todoList = JSON.parse(localStorage.getItem('tasks'));
+} else {
+  localStorage.setItem('tasks', JSON.stringify(allTasks));
+}
 //   const sortedTask = todoList.sort((a, b) => a.index - b.index);
 //   sortedTask.forEach((task) => {
 //     const listItem = document.createElement('li');
@@ -78,5 +85,5 @@ function render(tasks) {
 //     taskList.append(listItem);
 //   });
 // }
-
+const sortedTasks = todoList.sort((a, b) => a.index - b.index);
 document.addEventListener('DOMContentLoaded', render);
