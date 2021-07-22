@@ -1,4 +1,7 @@
-import './css/styles.css';
+import _ from 'lodash';
+import './style.css';
+
+import './style.css';
 
 const todoList = [
   {
@@ -24,7 +27,7 @@ function render() {
   const sortedTask = todoList.sort((a, b) => a.index - b.index);
   sortedTask.forEach((task) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('border flex height pad-left');
+    listItem.classList.add('border', 'flex', 'height', 'pad-left');
     const spanItem = document.createElement('span');
     const checkBox = document.createElement('input');
     checkBox.type = 'checbox';
