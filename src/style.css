@@ -93,6 +93,11 @@ p.strike {
   font-size: 1.4em;
   font-style: italic;
   color: rgba(0, 0, 0, 0.541);
+  border: none;
+}
+
+.fa-level-down-alt {
+  margin-right: 1em;
 }
 
 .p-div {
