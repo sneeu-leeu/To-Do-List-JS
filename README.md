@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://mystifying-blackwell-0a1fc0.netlify.app/)
+[Live Demo Link](https://kind-khorana-f0abae.netlify.app/)
 
 To get a local copy up and running follow these simple example steps.
 
