@@ -2,10 +2,19 @@ import './css/styles.css';
 
 const todoList = [
   {
-
+    description: '1 - Task 1',
+    completed: false,
+    index: 0,
   },
   {
-
+    description: '2 - Task 2',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: '3 - Task 3',
+    completed: false,
+    index: 2,
   },
 ];
 
