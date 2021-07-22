@@ -2,6 +2,9 @@
 import _ from 'lodash';
 import './style.css';
 import updateStatus from './box_status.js';
+import {
+  addNewTask, editTask, deleteTask, clearAllCompleted,
+} from './add_remove.js';
 import { dragStart, dragOver, drop } from './drag.js';
 
 const taskList = document.getElementById('js-todo-list');
