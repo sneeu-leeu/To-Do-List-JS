@@ -6,9 +6,6 @@ module.exports = {
   devServer: {
     contentBase: './dist',
   },
-  devServer: {
-    contentBase: './dist',
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',

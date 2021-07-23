@@ -14,17 +14,19 @@
 
 ## Live Demo
 
-[Live Demo Link](https://mystifying-blackwell-0a1fc0.netlify.app/)
+[Live Demo Link](https://compassionate-stonebraker-45d168.netlify.app/
 
 To get a local copy up and running follow these simple example steps.
 
-### Local Setup
+### Setup
 
-- Go to [My Repo](https://github.com/sneeu-leeu/To-Do-List/tree/development) and clone the project by opening your terminal and entering "git clone" + "The link supplied". 
+Go to [My Repo](https://github.com/sneeu-leeu/To-Do-List/tree/development) and clone the project by opening your terminal and entering "git clone" + "The link supplied".
 
-- in your teminal type 'git checkout dinamic' to go to the current working branch.
+cd into the repo
 
-- Open the repo in your code editor and launch it!
+run ' npm install '
+
+Open the repo in your code editor and launch it by running '$ npm start' !
 
 ## Authors
 
@@ -42,18 +44,14 @@ Linkedin: Stephan Annandale
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+
+Feel free to check the [issues page](https://github.com/sneeu-leeu/To-Do-List/issues/4).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
