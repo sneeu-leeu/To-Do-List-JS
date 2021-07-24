@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://compassionate-stonebraker-45d168.netlify.app/
+[Live Demo Link](https://compassionate-stonebraker-45d168.netlify.app/)
 
 To get a local copy up and running follow these simple example steps.
 
