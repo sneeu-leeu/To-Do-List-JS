@@ -30,7 +30,7 @@ function editTask(e, listItem, textElement, spanItem, todoList, task, render) {
   textElement.remove();
   const inputElement = document.createElement('input');
   inputElement.value = task.description;
-  inputElement.classList.add('bg-red no-border white-txt ');
+  inputElement.classList.add('bg-red', 'no-border', 'white-txt');
   spanItem.append(inputElement);
 
   inputElement.addEventListener('keydown', (e) => {
