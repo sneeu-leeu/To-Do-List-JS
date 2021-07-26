@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://kind-khorana-f0abae.netlify.app/)
+[Live Demo Link](https://compassionate-stonebraker-45d168.netlify.app/)
 
 To get a local copy up and running follow these simple example steps.
 
@@ -54,9 +54,5 @@ Feel free to check the [issues page](https://github.com/sneeu-leeu/To-Do-List/is
 
 Give a ⭐️ if you like this project!
 
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc

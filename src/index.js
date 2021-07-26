@@ -2,27 +2,14 @@
 import _ from 'lodash';
 import './style.css';
 import updateStatus from './box_status.js';
+import {
+  addNewTask, editTask, deleteTask, clearAllCompleted,
+} from './add_remove.js';
 import { dragStart, dragOver, drop } from './drag.js';
 
 const taskList = document.getElementById('js-todo-list');
 
-let todoList = [
-  {
-    description: '1 - Task 1',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: '2 - Task 2',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: '3 - Task 3',
-    completed: false,
-    index: 2,
-  },
-];
+let todoList = [];
 
 function render(tasks) {
   taskList.innerHTML = '';
@@ -38,11 +25,18 @@ function render(tasks) {
     const labelItem = document.createElement('label');
     const textElement = document.createElement('p');
     textElement.classList.add('pad-left');
-
     textElement.innerText = task.description;
     const menu = document.createElement('i');
     menu.classList.add('fa', 'fa-ellipsis-v', 'right');
-
+    menu.addEventListener('click', (e) => {
+      editTask(e, listItem, textElement, spanItem, todoList, task, render);
+      menu.addEventListener('click', () => {
+        deleteTask(task);
+        todoList = JSON.parse(localStorage.getItem('tasks'));
+        const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+        render(sortedTasks);
+      });
+    });
     labelItem.append(textElement);
     listItem.append(spanItem, menu);
     taskList.append(listItem);
@@ -74,6 +68,31 @@ if (localStorage.getItem('tasks')) {
 } else {
   localStorage.setItem('tasks', JSON.stringify(todoList));
 }
+
+document.getElementById('add-button').addEventListener('click', () => {
+  addNewTask();
+  todoList = JSON.parse(localStorage.getItem('tasks'));
+  const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+  render(sortedTasks);
+});
+
+document.getElementById('task-description').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    addNewTask();
+    todoList = JSON.parse(localStorage.getItem('tasks'));
+    const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+    render(sortedTasks);
+  }
+});
+
+document.getElementById('clear-completed-button').addEventListener('click', () => {
+  clearAllCompleted();
+  if (localStorage.getItem('tasks')) {
+    todoList = JSON.parse(localStorage.getItem('tasks'));
+    const sortedTasks = todoList.sort((a, b) => a.index - b.index);
+    render(sortedTasks);
+  }
+});
 
 const sortedTasks = todoList.sort((a, b) => a.index - b.index);
 document.addEventListener('DOMContentLoaded', render(sortedTasks));

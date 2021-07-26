@@ -18,6 +18,10 @@
   padding-left: 10px;
 }
 
+.pad-left-1 {
+  padding-left: 20px;
+}
+
 .height {
   height: 3em;
 }
@@ -42,12 +46,20 @@ body {
   font-size: 1.4em;
 }
 
+.white-txt {
+  color: white;
+}
+
 .move {
   height: 1em;
 }
 
 .refresh {
   height: 1.1em;
+}
+
+.add-button {
+  transform: rotate(90deg);
 }
 
 .todo-item {
@@ -89,6 +101,11 @@ p.strike {
   font-size: 1.4em;
   font-style: italic;
   color: rgba(0, 0, 0, 0.541);
+  border: none;
+}
+
+.fa-level-down-alt {
+  margin-right: 1em;
 }
 
 .p-div {
@@ -103,4 +120,8 @@ p.strike {
   height: 3.4em;
   color: rgba(0, 0, 0, 0.541);
   background-color: rgba(240, 240, 240, 0.836);
+}
+
+.bg-red {
+  background-color: red;
 }
