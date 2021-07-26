@@ -18,6 +18,10 @@
   padding-left: 10px;
 }
 
+.pad-left-1 {
+  padding-left: 20px;
+}
+
 .height {
   height: 3em;
 }
@@ -40,6 +44,10 @@ body {
 
 .app-title {
   font-size: 1.4em;
+}
+
+.white-txt {
+  color: white;
 }
 
 .move {

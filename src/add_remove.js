@@ -1,11 +1,13 @@
 function addNewTask() {
   const taskArray = JSON.parse(localStorage.getItem('tasks'));
   const description = document.getElementById('task-description').value;
-  taskArray.push({
-    description,
-    completed: false,
-    index: taskArray.length + 1,
-  });
+  if (description !== '') {
+    taskArray.push({
+      description,
+      completed: false,
+      index: taskArray.length + 1,
+    });
+  }
   document.getElementById('task-description').value = '';
   localStorage.setItem('tasks', JSON.stringify(taskArray));
 }
@@ -28,7 +30,7 @@ function editTask(e, listItem, textElement, spanItem, todoList, task, render) {
   textElement.remove();
   const inputElement = document.createElement('input');
   inputElement.value = task.description;
-  inputElement.classList.add('bg-red');
+  inputElement.classList.add('bg-red no-border white-txt ');
   spanItem.append(inputElement);
 
   inputElement.addEventListener('keydown', (e) => {
