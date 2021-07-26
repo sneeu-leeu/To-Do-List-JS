@@ -20,7 +20,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Go to [My Repo](https://github.com/sneeu-leeu/To-Do-List/tree/development) and clone the project by opening your terminal and entering "git clone" + "The link supplied".
+Go to [My Repo](https://sneeu-leeu.github.io/To-Do-List-JS/docs/) and clone the project by opening your terminal and entering "git clone" + "The link supplied".
 
 cd into the repo
 
