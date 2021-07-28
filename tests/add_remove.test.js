@@ -35,11 +35,18 @@ describe('Test Add and Remove', () => {
     `;
     addNewTask();
     addNewTask();
-    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    addNewTask();
+
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
     render(tasks);
+
     let taskList = document.querySelectorAll('#js-todo-list li');
     const initialLength = taskList.length;
+
     deleteTask({ index: 1 });
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    render(tasks);
+
     taskList = document.querySelectorAll('#js-todo-list li');
     expect(taskList).toHaveLength(initialLength - 1);
   });

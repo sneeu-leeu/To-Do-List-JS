@@ -1,3 +1,4 @@
+// eslint-disable-next-line func-names
 const localStorage = (function () {
   let store = {
     tasks: '[]',
