@@ -13,4 +13,4 @@ function updateStatus(textElement, checkBox, task) {
   localStorage.setItem('tasks', JSON.stringify(todoList));
 }
 
-export default updateStatus;
+module.exports = updateStatus;

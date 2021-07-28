@@ -4,7 +4,7 @@ const localStorage = (function () {
   };
 
   return {
-    getItem: (key) => store[Key],
+    getItem: (key) => store[key],
     setItem: (key, value) => {
       store[key] = value.toString();
     },
@@ -14,6 +14,6 @@ const localStorage = (function () {
       };
     },
   };
-});
+}());
 
 Object.defineProperty(window, 'localStorage', { value: localStorage });
