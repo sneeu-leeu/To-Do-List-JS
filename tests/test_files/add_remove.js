@@ -1,4 +1,3 @@
-
 function addNewTask() {
   const taskArray = JSON.parse(localStorage.getItem('tasks'));
   const description = document.getElementById('task-description').value;
