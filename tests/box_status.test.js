@@ -1,20 +1,11 @@
 const { updateStatus } = require('./test_files/box_status.js');
 const { render } = require('./test_files/index.js');
 const { addNewTask } = require('./test_files/add_remove.js');
+const DOM = require('./DOMmock.js');
 
 describe('Test Status Change Functionality', () => {
   test('Set a task status to completed, when clicked', () => {
-    document.body.innerHTML = `
-      <div>
-        <ul id="js-todo-list">
-            
-        </ul>
-        <input id="task-description" value="something">
-          
-        </input>
-      </div>
-    `;
-
+    DOM();
     localStorage.clear();
     addNewTask();
     let tasks = JSON.parse(localStorage.getItem('tasks'));
