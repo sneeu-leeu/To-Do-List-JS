@@ -21,7 +21,7 @@ describe('Test Edit Task Functionality', () => {
       spanItem,
       tasks,
       tasks[0],
-      render
+      render,
     );
     const inputElement = spanItem.children[1];
     inputElement.value = 'New Task Description';
