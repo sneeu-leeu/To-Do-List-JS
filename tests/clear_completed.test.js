@@ -1,16 +1,11 @@
 const { render } = require('./test_files/index.js');
 const { addNewTask, clearAllCompleted } = require('./test_files/add_remove.js');
+const DOM = require('./DOMmock.js');
 
 describe('Clear all tasks after they have been completed', () => {
   test('Should clear all tasks from todoList that have been marked completed', () => {
-    document.body.innerHTML = `
-    <div>
-      <ul id="js-todo-list">
-      </ul>
-      <input id="task-description" value="something">
-      </input>
-    </div>
-  `;
+    DOM();
+
     localStorage.clear();
 
     addNewTask();
@@ -20,7 +15,7 @@ describe('Clear all tasks after they have been completed', () => {
     addNewTask();
 
     let tasks = JSON.parse(localStorage.getItem('tasks'));
-    
+
     tasks[1].completed = true;
     tasks[3].completed = true;
     tasks[4].completed = true;

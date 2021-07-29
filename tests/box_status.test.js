@@ -23,16 +23,7 @@ describe('Test Status Change Functionality', () => {
   });
 
   test('Should be set to uncompleted if clicked again', () => {
-    document.body.innerHTML = `
-      <div>
-        <ul id="js-todo-list">
-            
-        </ul>
-        <input id="task-description" value="something">
-          
-        </input>
-      </div>
-    `;
+    DOM();
     localStorage.clear();
     addNewTask();
     let tasks = JSON.parse(localStorage.getItem('tasks'));

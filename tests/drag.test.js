@@ -1,20 +1,11 @@
 const { dragOver, dragStart, drop } = require('./test_files/drag.js');
 const { render } = require('./test_files/index.js');
 const { addNewTask } = require('./test_files/add_remove.js');
+const DOM = require('./DOMmock.js');
 
 describe('Test Drag and Drop functionality', () => {
-  test('should change task\'s index on drag drop', () => {
-    document.body.innerHTML = `
-      <div>
-        <ul id="js-todo-list">
-            
-        </ul>
-        <input id="task-description" value="something">
-          
-        </input>
-      </div>
-    `;
-
+  test("should change task's index on drag drop", () => {
+    DOM();
     localStorage.clear();
 
     addNewTask();
@@ -54,17 +45,8 @@ describe('Test Drag and Drop functionality', () => {
     expect(!tasks[2].completed).toBe(true);
   });
 
-  test('should change task\'s index on drag drop', () => {
-    document.body.innerHTML = `
-      <div>
-        <ul id="js-todo-list">
-            
-        </ul>
-        <input id="task-description" value="something">
-          
-        </input>
-      </div>
-    `;
+  test("should change task's index on drag drop", () => {
+    DOM();
 
     localStorage.clear();
 
