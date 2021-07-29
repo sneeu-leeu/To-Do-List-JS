@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const { dragStart, dragOver } = require('./drag.js');
 const { editTask, deleteTask } = require('./add_remove.js');
 const { updateStatus } = require('./box_status.js');
